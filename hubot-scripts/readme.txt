@@ -1,0 +1,1 @@
+This is the folder that Salt will keep in sync for Hubot's scripts.
