@@ -161,7 +161,7 @@ module.exports = (robot) ->
       # Kirk khan
       memeGenerator msg, 6443, 1123022, "", khanify(msg.match[2]), (url) ->
         msg.send url
-	  else if Math.random() > 0.6
+	  else if Math.random() > 0.5
 	    # Angry Baby
       memeGenerator msg, 5910, 1121634, "", khanify(msg.match[2]), (url) ->
         msg.send url
