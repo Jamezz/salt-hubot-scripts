@@ -24,6 +24,8 @@ module.exports = (robot) ->
     weekday[6] = "Saturday";
     if (now.getDay() == 3)
         msg.send "http://greatsmiledental.net/greatsmilefile/wp-content/uploads/2014/10/hump-day.jpg"
+    else if (now.getDay() == 2)
+        msg.send "http://cdn.meme.am/instances/400x/60423523.jpg"
     else if (now.getDay() == 5)
         msg.send "http://12z7i52euxl02ta498gb08o8dx.wpengine.netdna-cdn.com/wp-content/uploads/2014/05/friday-2.jpg"
     else
