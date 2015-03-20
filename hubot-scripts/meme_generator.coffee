@@ -157,9 +157,13 @@ module.exports = (robot) ->
     memeResponder robot, meme
 
   robot.respond /(memegen )?k(?:ha|ah)nify (.*)/i, (msg) ->
-    if Math.random() > 0.5
+    if Math.random() > 0.3
       # Kirk khan
       memeGenerator msg, 6443, 1123022, "", khanify(msg.match[2]), (url) ->
+        msg.send url
+    else if Math.random() > 0.5
+	    # Angry Baby
+      memeGenerator msg, 5910, 1121634, "", khanify(msg.match[2]), (url) ->
         msg.send url
     else
       # Spock khan
