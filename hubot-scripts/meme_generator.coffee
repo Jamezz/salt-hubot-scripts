@@ -157,15 +157,18 @@ module.exports = (robot) ->
     memeResponder robot, meme
 
   robot.respond /(memegen )?k(?:ha|ah)nify (.*)/i, (msg) ->
-    if Math.random() > 0.5
+    if Math.random() > 0.3
       # Kirk khan
       memeGenerator msg, 6443, 1123022, "", khanify(msg.match[2]), (url) ->
+        msg.send url
+	  else if Math.random() > 0.5
+	    # Angry Baby
+      memeGenerator msg, 5910, 1121634, "", khanify(msg.match[2]), (url) ->
         msg.send url
     else
       # Spock khan
       memeGenerator msg, 2103732, 8814557, "", khanify(msg.match[2]), (url) ->
         msg.send url
-
 
   robot.respond /(memegen )?(IF .*), ((ARE|CAN|DO|DOES|HOW|IS|MAY|MIGHT|SHOULD|THEN|WHAT|WHEN|WHERE|WHICH|WHO|WHY|WILL|WON\'T|WOULD)[ \'N].*)/i, (msg) ->
     memeGenerator msg, 17, 984, msg.match[2], msg.match[3] + (if msg.match[3].search(/\?$/)==(-1) then '?' else ''), (url) ->
