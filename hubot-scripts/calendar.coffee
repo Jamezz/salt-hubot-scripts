@@ -3,6 +3,7 @@
 #
 # Commands:
 #   hubot calendar [me] - Print out this month's calendar
+#
 
 child_process = require('child_process')
 module.exports = (robot) ->
